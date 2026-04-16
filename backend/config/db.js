@@ -1,13 +1,12 @@
 const mysql = require("mysql2");
 
-const db = mysql.createPool(process.env.MYSQL_URL);
+const db = mysql.createConnection(process.env.MYSQL_URL);
 
-db.getConnection((err, conn) => {
+db.connect(err => {
   if (err) {
     console.error("DB Connection Failed ❌", err);
   } else {
     console.log("DB Connected ✅");
-    conn.release();
   }
 });
 
