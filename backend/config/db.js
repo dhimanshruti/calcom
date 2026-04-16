@@ -1,13 +1,17 @@
 const mysql = require("mysql2");
 
-const db = mysql.createConnection(process.env.MYSQL_URL);
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "shruti@27",
+  database: "calcom"
+});
 
 db.connect(err => {
   if (err) {
-    console.error("DB Connection Failed ❌", err);
+    console.error("DB connection failed:", err);
   } else {
-    console.log("DB Connected ✅");
+    console.log("MySQL Connected ✅");
   }
 });
-
-module.exports = db;
+module.exports = db;   // ✅ VERY IMPORTANT
