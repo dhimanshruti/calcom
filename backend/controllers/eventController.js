@@ -30,7 +30,7 @@ exports.createEvent = (req, res) => {
       // ✅ INSERT EVENT
       db.query(
         "INSERT INTO events (title, description, duration, slug) VALUES (?, ?, ?, ?)",
-        [title, description || "", parseInt(duration), slug],
+        [title, description || "", parseInt(duration)],
         (err) => {
           if (err) {
             console.error(err); // 🔥 VERY IMPORTANT
@@ -47,7 +47,10 @@ exports.createEvent = (req, res) => {
 // GET EVENTS
 exports.getEvents = (req, res) => {
   db.query("SELECT * FROM events", (err, results) => {
-    if (err) return res.status(500).json(err);
+    if (err) {
+      console.error("DB ERROR:", err);   // 👈 IMPORTANT
+      return res.status(500).json({ error: err.message });
+    }
     res.json(results);
   });
 };
