@@ -1,0 +1,93 @@
+.dashboard-container {
+  background: #f6f7f9;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* TITLE */
+.dashboard-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 420px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* FORM */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUT */
+.form-row input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.form-row button {
+  width: 120px;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* EVENTS */
+.event-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.event-title {
+  font-weight: 600;
+}
+
+.event-link a {
+  font-size: 13px;
+  color: #666;
+}
+
+.delete-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+
+.edit-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  margin-right: 10px;
+}

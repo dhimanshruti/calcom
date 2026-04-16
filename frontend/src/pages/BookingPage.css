@@ -1,0 +1,171 @@
+.booking-wrapper {
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.booking-card {
+  background: white;
+  padding: 30px;
+  width: 370px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+.booking-card h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.user-info img {
+  border-radius: 50%;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.timezone {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.booking-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.label {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.slots button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.slots button.active {
+  background: black;
+  color: white;
+}
+
+.summary {
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.book-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.loading {
+  font-size: 13px;
+  color: gray;
+}
+
+.no-slots {
+  font-size: 13px;
+  color: gray;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slots button.disabled {
+  background: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.calendar div {
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f1f1f1;
+}
+
+.calendar .active-day {
+  background: black;
+  color: white;
+}

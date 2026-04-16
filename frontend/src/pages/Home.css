@@ -1,0 +1,100 @@
+.home-container {
+  font-family: "Segoe UI", sans-serif;
+  background: #f7f8fa;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  padding: 8px 16px;
+  border: none;
+  background: #eee;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  padding: 8px 16px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.primary-btn.big {
+  margin-top: 20px;
+  padding: 12px 22px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  align-items: center;
+}
+
+.hero-left {
+  max-width: 500px;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  color: #666;
+}
+
+/* RIGHT CARD */
+.calendar-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.date-box {
+  background: #f1f2f4;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.date-box:focus {
+  outline: none;          /* ❌ remove input-like focus */
+}
+.date-box:hover {
+  background: black;
+  color: white;
+}
+
+h1, h2, h3, p {
+  user-select: none;
+}
